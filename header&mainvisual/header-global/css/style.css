@@ -1,0 +1,154 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "游ゴシック体", "Yu Gothic", yugothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+
+@media (min-width: 1088px) {
+  .hidden-pc {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1087px) {
+  .hidden-tab {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .hidden-sp {
+    display: none;
+  }
+}
+
+.header {
+  background-color: #3f51b5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.header_logo {
+  padding: 20px 0;
+  text-align: center;
+  line-height: 1;
+}
+
+.header_nav {
+  width: 100%;
+  background: #fff;
+  overflow: auto;
+}
+
+.header_nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header_nav ul li {
+  width: 25%;
+  border: 1px solid #fff;
+}
+
+.header_nav ul li a {
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  color: #fff;
+  background: #3f51b5;
+  display: block;
+  text-align: center;
+  padding: 16px;
+  position: relative;
+}
+
+.header_nav ul li a:hover {
+  background: #e81919;
+}
+
+.inner {
+  width: 1088px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.mainvisual {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  background: transparent url("../img/mainvisual.png") no-repeat top center/cover;
+  overflow: hidden;
+}
+
+.mainvisual_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.mainvisual_title {
+  font-size: 68px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.mainvisual_lead {
+  font-size: 38px;
+  font-weight: bold;
+  margin-top: 3px;
+}
+
+.mainvisual_button {
+  margin-top: 78px;
+}
+
+.button, .button-mainvisual {
+  background: #3f51b5;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 1em 3em;
+  display: inline-block;
+}
+
+.button-mainvisual {
+  transition: all 0.5s ease 0s;
+  padding: 12px 80px;
+  border-radius: 12px;
+  font-size: 38px;
+}
