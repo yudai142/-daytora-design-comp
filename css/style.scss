@@ -11,7 +11,14 @@ $hover-opacity: 0.6; // 透過度
 $layout-width-canvas: 1366px;
 $layout-width-inner: 1088px;
 // ブレークポイント
-$breakpoints: ( "sp": "(max-width: 767px)", "tab-only": "(min-width: 768px) and (max-width: #{$layout-width-inner - 1px})", "tab": "(max-width: #{$layout-width-inner - 1px})", "pc": "(min-width: #{$layout-width-inner})", );
+$breakpoints: {
+  "sp": "(max-width: 767px)",
+  "tab-only": "(min-width: 768px) and (max-width: #{$layout-width-inner - 1px})",
+  "tab": "(max-width: #{$layout-width-inner - 1px})",
+  "pc": "(min-width: #{$layout-width-inner})",
+}
+
+;
 // 階層
 $layer: ( modal: 100, // モダール
 drawer: 40, // ドロワー
@@ -23,16 +30,7 @@ default: 1, );
 $padding-tab: 24px;
 $padding-sp: 16px;
 // フォント
-$font-family-default: "游ゴシック体",
-"Yu Gothic",
-yugothic,
-"ヒラギノ角ゴ Pro",
-"Hiragino Kaku Gothic Pro",
-"メイリオ",
-meiryo,
-"MS Pゴシック",
-"MS PGothic",
-sans-serif; // 標準フォント
+$font-family-default: ("游ゴシック体", "Yu Gothic", yugothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", meiryo, "MS Pゴシック", "MS PGothic", sans-serif); // 標準フォント
 $font-family-base: $font-family-default;
 $font-size-base: 16px;
 $font-weight-base: 400;
@@ -58,14 +56,14 @@ body {
 }
 
 body {
-  font-family: "游ゴシック体", "Yu Gothic", yugothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #333;
-  line-height: 1.6;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  color: $color-text-base;
+  line-height: $line-height-base;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #fff;
+  background: $color-background-base;
   overflow-x: hidden;
   overflow-wrap: break-word;
 }

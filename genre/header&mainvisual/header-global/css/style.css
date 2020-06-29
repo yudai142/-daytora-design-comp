@@ -2,7 +2,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html,
@@ -71,8 +72,12 @@ img {
 
 .header_nav ul {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
   padding: 0;
 }
@@ -83,6 +88,7 @@ img {
 }
 
 .header_nav ul li a {
+  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   text-decoration: none;
   color: #fff;
@@ -115,7 +121,8 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   margin-top: 50px;
   width: 100%;
   text-align: center;
@@ -147,6 +154,7 @@ img {
 }
 
 .button-mainvisual {
+  -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
   padding: 12px 80px;
   border-radius: 12px;
