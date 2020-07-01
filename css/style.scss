@@ -11,25 +11,14 @@ $hover-opacity: 0.6; // 透過度
 $layout-width-canvas: 1366px;
 $layout-width-inner: 1088px;
 // ブレークポイント
-$breakpoints: {
-  "sp": "(max-width: 767px)",
-  "tab-only": "(min-width: 768px) and (max-width: #{$layout-width-inner - 1px})",
-  "tab": "(max-width: #{$layout-width-inner - 1px})",
-  "pc": "(min-width: #{$layout-width-inner})",
-}
-
-;
+$breakpoints: ( "sp": "(max-width: 767px)", "tab-only": "(min-width: 768px) and (max-width: #{$layout-width-inner - 1px})", "tab": "(max-width: #{$layout-width-inner - 1px})", "pc": "(min-width: #{$layout-width-inner})", );
 // 階層
-$layer: {
-  modal: 100, // モダール
-  drawer: 40, // ドロワー
-  floating: 30, // フローティングアイテム
-  header: 20, // ヘッダー
-  footer: 10, // フッター
-  default: 1,
-}
-
-;
+$layer: ( modal: 100, // モダール
+drawer: 40, // ドロワー
+floating: 30, // フローティングアイテム
+header: 20, // ヘッダー
+footer: 10, // フッター
+default: 1, );
 // 余白
 $padding-tab: 24px;
 $padding-sp: 16px;
@@ -103,7 +92,6 @@ img {
   width: $layout-width-inner;
   max-width: 100%;
   margin: 0 auto;
-  height: inherit;
   @include mq('tab') {
     padding-left: $padding-tab;
     padding-right: $padding-tab;
@@ -145,6 +133,35 @@ img {
   }
 }
 
+.section-title {
+  font-size: 60px;
+  font-weight: bold;
+  padding: 0 0 28px;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  &::after {
+    background: $color-main;
+    width: 76px;
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    @include mq('sp') {
+      width: 48px;
+    }
+  }
+  @include mq('tab') {
+    font-size: 50px;
+    padding-bottom: 28px;
+  }
+  @include mq('sp') {
+    font-size: 42px;
+    padding-bottom: 16px;
+  }
+}
+
 .header {
   position: fixed;
   top: 0px;
@@ -159,11 +176,11 @@ img {
     padding-top: 14px;
     padding-bottom: 14px;
   }
-  &_inner {
+  &__inner {
     display: flex;
     align-items: center;
   }
-  &_logo {
+  &__logo {
     margin: 0;
     line-height: 1;
     img {
@@ -181,7 +198,7 @@ img {
       transition: all 0.3s ease 0s;
     }
   }
-  &_nav {
+  &__nav {
     margin-left: auto;
     @include mq('sp') {
       display: none;
@@ -237,7 +254,7 @@ img {
   @include mq('sp') {
     height: 500px;
   }
-  &_content {
+  &__content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -256,7 +273,7 @@ img {
       margin-top: 30px;
     }
   }
-  &_title {
+  &__title {
     font-size: 68px;
     font-weight: 700;
     line-height: 1.4;
@@ -267,7 +284,7 @@ img {
       font-size: 36px;
     }
   }
-  &_lead {
+  &__lead {
     font-size: 38px;
     font-weight: 700;
     margin-top: 3px;
@@ -278,7 +295,7 @@ img {
       font-size: 20px;
     }
   }
-  &_button {
+  &__button {
     margin-top: 78px;
     @include mq('tab') {
       margin-top: 62px;
@@ -286,5 +303,78 @@ img {
     @include mq('sp') {
       margin-top: 42px;
     }
+  }
+}
+
+.card {
+  background: #efefef;
+  padding: 56px 0 142px;
+  @include mq('sp') {
+    padding-top: 36px;
+    padding-bottom: 80px;
+  }
+  &__inner {}
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 58px;
+    @include mq('sp') {
+      margin-top: 30px;
+    }
+  }
+  &__item {
+    width: calc(33.33333333% - 30px * 2 / 3);
+    margin-right: 30px;
+    margin-top: 20px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    @include mq('tab') {
+      width: calc(50% - 24px / 2);
+      margin-right: 24px;
+      &:nth-child(3n) {
+        margin-right: 24px;
+      }
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+  @include mq('sp') {
+    width: 100%;
+    margin-right: 0;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.media {
+  overflow: hidden;
+  background: #fff;
+  border-radius: 4px;
+  padding: 16px;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+  &__img {
+    text-align: bottom;
+    img {
+      vertical-align: bottom;
+    }
+  }
+  &__body {
+    padding: 22px 0;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 20px;
+    color: #6f7579;
+  }
+  &__content {
+    font-weight: bold;
+    color: #6f7579;
+    margin-top: 14px;
+    line-height: (24 / 16);
   }
 }
