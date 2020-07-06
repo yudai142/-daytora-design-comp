@@ -455,3 +455,144 @@ img {
   margin-top: 14px;
   line-height: 1.5;
 }
+
+.news {
+  padding: 56px 0 32px;
+}
+
+.news__items {
+  margin: 70px auto 0;
+  width: 844px;
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .news__items {
+    margin-top: 38px;
+  }
+}
+
+.news__item {
+  border-bottom: 1px solid #707070;
+}
+
+.news__item:last-child {
+  border: none;
+}
+
+.news__link {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.news__link a {
+  text-decoration: none;
+  color: #e81919;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  font-weight: bold;
+}
+
+.news__link a::after {
+  content: "";
+  width: 7px;
+  height: 11px;
+  display: inline-block;
+  margin-left: 6px;
+  vertical-align: middle;
+  margin-top: -1;
+  background: transparent url(../img/pagenation-right.png) no-repeat center center/contain;
+}
+
+.info {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .info {
+    display: block;
+    padding: 12px 0;
+  }
+}
+
+.info__meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 245px;
+  padding-top: 2px;
+}
+
+@media (max-width: 767px) {
+  .info__meta {
+    width: 100%;
+    padding-top: 0;
+  }
+}
+
+.info__published {
+  width: 115px;
+  display: inline-block;
+  padding-top: 3px;
+}
+
+@media (max-width: 767px) {
+  .info__published {
+    width: auto;
+  }
+}
+
+.info__label {
+  width: 100px;
+}
+
+@media (max-width: 767px) {
+  .info__label {
+    width: auto;
+    margin-left: auto;
+  }
+}
+
+.info__label a {
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 3px 18px;
+  background-color: #666;
+  border-radius: 6px;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.info__label--type01 a {
+  background-color: #3F51B5;
+  text-decoration: none;
+}
+
+.info__label--type02 a {
+  background-color: #E81919;
+}
+
+.info__title {
+  line-height: 1.625;
+  width: calc(100% - 115px - 130px);
+}
+
+@media (max-width: 767px) {
+  .info__title {
+    width: 100%;
+    margin-top: 6px;
+  }
+}
+
+.info__title a {
+  text-decoration: none;
+  color: #333;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
