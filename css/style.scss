@@ -358,7 +358,7 @@ img {
   text-decoration: none;
   transition: all 0.3s ease 0s;
   &__img {
-    text-align: bottom;
+    text-align: center;
     img {
       vertical-align: bottom;
     }
@@ -419,7 +419,7 @@ img {
 }
 
 .info {
-  padding: 20px 0;
+  padding: 16px 6px;
   display: flex;
   @include mq('sp') {
     display: block;
@@ -443,7 +443,7 @@ img {
     }
   }
   &__label {
-    width: 100px;
+    width: 130px;
     @include mq('sp') {
       width: auto;
       margin-left: auto;

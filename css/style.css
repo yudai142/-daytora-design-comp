@@ -432,7 +432,7 @@ img {
 }
 
 .media__img {
-  text-align: bottom;
+  text-align: center;
 }
 
 .media__img img {
@@ -505,7 +505,7 @@ img {
 }
 
 .info {
-  padding: 20px 0;
+  padding: 16px 6px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -546,7 +546,7 @@ img {
 }
 
 .info__label {
-  width: 100px;
+  width: 130px;
 }
 
 @media (max-width: 767px) {
