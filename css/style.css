@@ -752,7 +752,7 @@ img {
 }
 
 .map {
-  padding: 68px 0 136px;
+  padding: 60px 0 136px;
 }
 
 @media (max-width: 767px) {
@@ -765,7 +765,7 @@ img {
 .map__iframe {
   width: 800px;
   max-width: 100%;
-  margin: 139px auto 0;
+  margin: 102px auto 0;
 }
 
 @media (max-width: 767px) {

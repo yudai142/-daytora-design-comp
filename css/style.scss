@@ -596,7 +596,7 @@ img {
 }
 
 .map {
-  padding: 68px 0 136px;
+  padding: 60px 0 136px;
   @include mq('sp') {
     padding-top: 60px;
     padding-bottom: 80px;
@@ -605,7 +605,7 @@ img {
   &__iframe {
     width: 800px;
     max-width: 100%;
-    margin: 139px auto 0;
+    margin: 102px auto 0;
     @include mq('sp') {
       margin-top: 60px;
     }
