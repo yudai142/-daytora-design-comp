@@ -228,6 +228,49 @@
       </div>
     </div>
   </section>
+  <section class="contact">
+    <div class="contact__inner inner">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact__item">
+        <form action="#">
+          <dl class="contact__controls">
+            <div class="contact__control">
+              <dt><label for="" class="contact__label contact__label--required" for="your-name">お名前</label></dt>
+              <dd><input type="text" class="form-input" type="text" name="your-name" value="" placeholder="山田太郎" required></dd>
+            </div>
+            <div class="contact__control">
+              <dt><label for="" class="contact__label contact__label--required" for="your-mail">メールアドレス</label></dt>
+              <dd><input type="text" class="form-input" type="email" name="your-mail" value="" placeholder="text@example.com" required></dd>
+            </div>
+            <div class="contact__control">
+              <dt><label for="" class="contact__label" for="your-kind">お問い合わせ種別</label></dt>
+              <dd>
+                <select name="" id="your-kind" class="form-select">
+                  <option value="">ーーー</option>
+                  <option value="a">セレクトA</option>
+                  <option value="b">セレクトB</option>
+                  <option value="c">セレクトC</option>
+                </select>
+              </dd>
+            </div>
+            <div class="contact__control">
+              <dt><label for="" class="contact__label" for="your-message">お問い合わせ内容</label></dt>
+              <dd><textarea name="your-message" id="your-message" class="form-textarea" placeholder="お問い合わせを入力してください"></textarea></dd>
+            </div>
+          </dl>
+          <div class="contact__radio">
+            <label for="" class="contact__radio-item"><input type="radio" class="form-radio" checked><span>ラジオ１</span></label>
+            <label for="" class="contact__radio-item"><input type="radio" class="form-radio"><span>ラジオ２</span></label>
+            <label for="" class="contact__radio-item"><input type="radio" class="form-radio"><span>ラジオ３</span></label>
+          </div>
+          <div class="contact__check">
+            <label for=""><input class="form-checkbox" type="checkbox" name="your-checkbox" required><span><a href="">プライバシーポリシー</a>に合意する</span></label>
+          </div>
+          <div class="contact__submit"><input type="text" class="form-button" value="送信する"></div>
+        </form>
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>

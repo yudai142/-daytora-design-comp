@@ -596,7 +596,7 @@ img {
 }
 
 .map {
-  padding: 60px 0 136px;
+  padding: 60px 88px;
   @include mq('sp') {
     padding-top: 60px;
     padding-bottom: 80px;
@@ -659,6 +659,292 @@ img {
   }
   &__link {
     text-align: center;
+    margin: 30px 0;
+  }
+}
+
+.contact {
+  padding: 56px 0 124px;
+  background: #efefef;
+  @include mq('sp') {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+  &__inner {}
+  &__item {
+    margin: 48px auto 0;
+    padding: 58px 48px 60px;
+    background: #fff;
+    width: 800px;
+    max-width: 100%;
+    @include mq('sp') {
+      padding: 24px 16px;
+      margin-top: 26px;
+    }
+  }
+  &__controls {
+    margin: 0;
+  }
+  &__control {
+    margin-bottom: 52px;
+    display: flex;
+    @include mq('sp') {
+      display: block;
+      margin-bottom: 24px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    dt {
+      width: 180px;
+      padding: 14px 0 0;
+      margin: 0;
+      @include mq('sp') {
+        width: 100%;
+        padding-top: 0;
+      }
+    }
+    dd {
+      flex-grow: 1;
+      padding: 0;
+      margin: 0;
+      @include mq('sp') {
+        width: 100%;
+        margin-top: 8px;
+      }
+    }
+  }
+  &__label {
+    font-size: 18px;
+    font-weight: bold;
+    @include mq('sp') {
+      font-size: 16px;
+      display: inline-block;
+    }
+    &--required {
+      position: relative;
+      @include mq('sp') {
+        padding-right: 54px;
+      }
+      &::after {
+        content: "必須";
+        position: absolute;
+        background: $color-active;
+        border-radius: 12px;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 1px 8px;
+        width: 46px;
+        display: block;
+        top: calc(100% + 6px);
+        left: 0;
+        @include mq('sp') {
+          top: 50%;
+          left: auto;
+          right: 0;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+  &__radio {
+    margin-top: 40px;
+    padding: 0 10px;
+    @include mq('sp') {
+      margin-top: 26px;
+    }
+    &-item {
+      margin-right: 26px;
+      &:last-child {
+        margin-right: 0;
+      }
+      @include mq('sp') {
+        margin-bottom: 16px;
+        margin-right: 0;
+        display: block;
+      }
+    }
+  }
+  &__check {
+    margin-top: 46px;
+    text-align: center;
+    @include mq('sp') {
+      margin-top: 24px;
+    }
+    a {
+      color: $color-text-base;
+      transition: all 0.3s ease 0s;
+    }
+  }
+  &__submit {
     margin-top: 30px;
+    text-align: center;
+  }
+}
+
+.form {
+  &-input {
+    width: 100%;
+    border: 1px solid #707070;
+    padding: 16px;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1em;
+    @include mq('sp') {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+  &-select {
+    appearance: none;
+    background: transparent url(../img/select-arrow.png) no-repeat center right 18px / 24px 15px;
+    border-radius: 0;
+    color: inherit;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1em;
+    padding: 14px 16px;
+    width: 100%;
+    border: 1px solid #707070;
+    @include mq('sp') {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-position: center right 10px;
+    }
+    &::-ms-expand {
+      display: none;
+    }
+  }
+  &-textarea {
+    width: 100%;
+    height: 240px;
+    border: 1px solid #707070;
+    resize: none;
+    padding: 10px 16px;
+    line-height: (26 / 16);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1em;
+    @include mq('sp') {
+      height: 180px;
+    }
+  }
+  &-radio {
+    display: none;
+    +span {
+      cursor: pointer;
+      display: inline-block;
+      padding: 0 0 0 40px;
+      position: relative;
+      &::before,
+      &::after {
+        content: "";
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &::before {
+        background: #fff;
+        border: 1px solid #707070;
+        display: block;
+        left: 0;
+        width: 30px;
+        height: 30px;
+      }
+      &::after {
+        background: $color-main;
+        border: 1px solid transparent;
+        left: 6px;
+        width: 18px;
+        height: 18px;
+        transition: opacity 0.3s ease 0s;
+        opacity: 0;
+      }
+    }
+    &:checked {
+      +span {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &-checkbox {
+    display: none;
+    +span {
+      cursor: pointer;
+      display: inline-block;
+      padding: 0 0 0 50px;
+      position: relative;
+      @include mq('sp') {
+        padding-left: 46px;
+      }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &::before {
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.16);
+        display: block;
+        left: 0;
+        width: 30px;
+        height: 30px;
+      }
+      &::after {
+        border: 1px solid transparent;
+        left: 1px;
+        width: 28px;
+        height: 22px;
+        background: transparent url(../img/icon-check.png) no-repeat center center / contain;
+        transition: opacity 0.3s ease 0s;
+        opacity: 0;
+      }
+    }
+    &:checked {
+      +span {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &-button {
+    -webkit-appearance: none;
+    background: $color-main url(../img/icon-arrow-right.png) no-repeat center right 18px / 13px 20px;
+    box-shadow: 0 3px 6px rgba(#000, 0.16);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    min-width: 260px;
+    padding: 14px 16px 13px;
+    font-size: 22px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: opacity 0.3s ease 0s;
+    text-align: center;
+    @include mq('sp') {
+      min-width: initial;
+      max-width: 100%;
+      width: 260px;
+    }
   }
 }
