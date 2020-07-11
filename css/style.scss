@@ -130,12 +130,16 @@ img {
       border-radius: 8px;
       font-size: 20px;
     }
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   &-arrow-right {
     @extend .button;
     border-radius: 12px;
     font-size: 20px;
     padding: 13px 58px 12px;
+    position: relative;
     @include mq('tab') {
       padding-left: 50px;
       padding-right: 50px;
@@ -159,6 +163,9 @@ img {
         width: (13px * 0.92);
         height: (20px * 0.92);
       }
+    }
+    &:hover {
+      opacity: $hover-opacity;
     }
   }
 }
@@ -226,6 +233,9 @@ img {
     a {
       text-decoration: none;
       transition: all 0.3s ease 0s;
+      &:hover {
+        opacity: $hover-opacity;
+      }
     }
   }
   &__nav {
@@ -261,6 +271,7 @@ img {
             opacity: 0;
             transition: all 0.3s ease 0s;
           }
+          &:hover,
           &.is-active {
             &::after {
               opacity: 1;
@@ -387,6 +398,9 @@ img {
   display: block;
   text-decoration: none;
   transition: all 0.3s ease 0s;
+  &:hover {
+    opacity: $hover-opacity;
+  }
   &__img {
     text-align: center;
     img {
@@ -442,7 +456,10 @@ img {
         margin-left: 6px;
         vertical-align: middle;
         margin-top: -1;
-        background: transparent url(../img/pagenation-right.png) no-repeat center center / contain;
+        background: transparent url(../img/news-arrow.png) no-repeat center center / contain;
+      }
+      &:hover {
+        opacity: $hover-opacity;
       }
     }
   }
@@ -488,6 +505,9 @@ img {
       border-radius: 6px;
       text-decoration: none;
       transition: all 0.3s ease 0s;
+      &:hover {
+        opacity: $hover-opacity;
+      }
     }
     &--type01 {
       a {
@@ -498,6 +518,7 @@ img {
     &--type02 {
       a {
         background-color: #E81919;
+        text-decoration: none;
       }
     }
   }
@@ -512,6 +533,9 @@ img {
       text-decoration: none;
       color: $color-text-base;
       transition: all 0.3s ease 0s;
+      &:hover {
+        opacity: $hover-opacity;
+      }
     }
   }
 }
@@ -591,6 +615,9 @@ img {
     a {
       color: $color-text-base;
       transition: all 0.3s ease 0s;
+      &:hover {
+        opacity: $hover-opacity;
+      }
     }
   }
 }
@@ -776,6 +803,9 @@ img {
     a {
       color: $color-text-base;
       transition: all 0.3s ease 0s;
+      &:hover {
+        opacity: $hover-opacity;
+      }
     }
   }
   &__submit {
@@ -941,6 +971,9 @@ img {
     font-weight: bold;
     transition: opacity 0.3s ease 0s;
     text-align: center;
+    &:hover {
+      opacity: $hover-opacity;
+    }
     @include mq('sp') {
       min-width: initial;
       max-width: 100%;
@@ -997,6 +1030,9 @@ img {
     a {
       transition: all 0.3s ease 0s;
       text-decoration: none;
+      &:hover {
+        opacity: $hover-opacity;
+      }
     }
     img {
       width: 200px;
@@ -1037,6 +1073,9 @@ img {
           color: #fff;
           text-decoration: none;
           transition: all 0.3s ease 0s;
+          &:hover {
+            opacity: $hover-opacity;
+          }
         }
       }
     }
@@ -1059,6 +1098,9 @@ img {
         a {
           text-decoration: none;
           transition: all 0.3s ease 0s;
+          &:hover {
+            opacity: $hover-opacity;
+          }
         }
         img {
           width: 30px;
@@ -1091,6 +1133,9 @@ img {
   a {
     text-decoration: none;
     transition: all 0.3s ease 0s;
+    &:hover {
+      opacity: $hover-opacity;
+    }
   }
   img {
     width: 60px;
