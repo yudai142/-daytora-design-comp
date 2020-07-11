@@ -178,6 +178,7 @@ img {
   position: relative;
   text-align: center;
   &::after {
+    content: "";
     background: $color-main;
     width: 76px;
     height: 5px;

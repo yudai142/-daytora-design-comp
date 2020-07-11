@@ -170,6 +170,7 @@ img {
 }
 
 .section-title::after {
+  content: "";
   background: #3f51b5;
   width: 76px;
   height: 5px;
