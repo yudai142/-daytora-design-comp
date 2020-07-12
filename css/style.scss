@@ -22,9 +22,25 @@ default: 1, );
 // 余白
 $padding-tab: 24px;
 $padding-sp: 16px;
+// Googleフォント
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&subset=japanese&display=swap');
 // フォント
-$font-family-default: ("游ゴシック体", "Yu Gothic", yugothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", meiryo, "MS Pゴシック", "MS PGothic", sans-serif); // 標準フォント
-$font-family-base: $font-family-default;
+$font-family-default: ("游ゴシック体",
+"Yu Gothic",
+yugothic,
+"ヒラギノ角ゴ Pro",
+"Hiragino Kaku Gothic Pro",
+"メイリオ",
+meiryo,
+"MS Pゴシック",
+"MS PGothic",
+sans-serif); // 標準フォント
+$font-family-english: 'Lato',
+sans-serif; // 英語フォント
+$font-family-japanese: 'Noto Sans JP',
+sans-serif; // 日本語フォント
+$font-family-base: $font-family-japanese;
 $font-size-base: 16px;
 $font-weight-base: 400;
 $line-height-base: 1.6;
@@ -177,6 +193,7 @@ img {
   margin: 0;
   position: relative;
   text-align: center;
+  font-family: $font-family-english;
   &::after {
     content: "";
     background: $color-main;
@@ -261,6 +278,7 @@ img {
           color: $color-background-base;
           display: block;
           position: relative;
+          font-family: $font-family-english;
           &::after {
             content: "";
             position: absolute;
@@ -447,6 +465,7 @@ img {
     a {
       text-decoration: none;
       color: $color-active;
+      font-family: $font-family-english;
       transition: all 0.3s ease 0s;
       font-weight: bold;
       &::after {
@@ -484,6 +503,7 @@ img {
   }
   &__published {
     width: 115px;
+    font-family: $font-family-english;
     display: inline-block;
     padding-top: 3px;
     @include mq('sp') {
@@ -598,6 +618,7 @@ img {
     background: #999;
     font-weight: bold;
     color: #fff;
+    font-family: $font-family-english;
     &:first-child {
       width: 158px;
       @include mq('tab') {
@@ -1074,6 +1095,7 @@ img {
           color: #fff;
           text-decoration: none;
           transition: all 0.3s ease 0s;
+          font-family: $font-family-english;
           &:hover {
             opacity: $hover-opacity;
           }
@@ -1114,6 +1136,7 @@ img {
     text-align: center;
     color: #fff;
     font-size: 14px;
+    font-family: $font-family-english;
     @include mq('sp') {
       margin-top: 50px;
     }
