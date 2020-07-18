@@ -322,23 +322,8 @@ img {
 }
 
 .mainvisual {
-  height: 700px;
   width: 100%;
-  background: transparent url(../img/mainvisual.png) no-repeat top center/cover;
-  position: relative;
   overflow: hidden;
-}
-
-@media (max-width: 1087px) {
-  .mainvisual {
-    height: 600px;
-  }
-}
-
-@media (max-width: 767px) {
-  .mainvisual {
-    height: 500px;
-  }
 }
 
 .mainvisual__content {
@@ -418,6 +403,115 @@ img {
   .mainvisual__button {
     margin-top: 42px;
   }
+}
+
+.swiper-slide {
+  position: relative;
+  height: 700px;
+  width: 100%;
+  background: transparent url(../img/mainvisual.png) no-repeat top center/cover;
+}
+
+@media (max-width: 1087px) {
+  .swiper-slide {
+    height: 600px;
+  }
+}
+
+@media (max-width: 767px) {
+  .swiper-slide {
+    height: 500px;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 75px;
+  height: 75px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  margin: -36px 0 0;
+  z-index: 3;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 767px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+}
+
+.swiper-button-prev {
+  background: transparent url(../img/slide-arrow-left.png) no-repeat center center/contain;
+  left: calc(50% - 544px+16px);
+}
+
+@media (max-width: 1087px) {
+  .swiper-button-prev {
+    left: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .swiper-button-prev {
+    left: 4px;
+  }
+}
+
+.swiper-button-next {
+  background: transparent url(../img/slide-arrow-right.png) no-repeat center center/contain;
+  right: calc(50% - 544px+16px);
+}
+
+@media (max-width: 1087px) {
+  .swiper-button-next {
+    right: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .swiper-button-next {
+    right: 4px;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: #2f7dc8;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 18px;
+  z-index: 2;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
 .card {

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -26,12 +27,51 @@
     </div>
   </header>
   <div class="mainvisual">
-    <div class="mainvisual__content">
-      <div class="mainvisual__title">一番伝えたい<br class="hidden-tab hidden-pc">ことを書く</div>
-      <div class="mainvisual__lead">リードリードリード</div>
-      <div class="mainvisual__button"><a class="button-mainvisual" href="">お問い合わせ</a></div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="mainvisual__content">
+            <div class="mainvisual__title">一番伝えたい<br class="hidden-tab hidden-pc">ことを書く</div>
+            <div class="mainvisual__lead">リードリードリード</div>
+            <div class="mainvisual__button"><a class="button-mainvisual" href="">お問い合わせ</a></div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="mainvisual__content">
+            <div class="mainvisual__title">一番伝えたい<br class="hidden-tab hidden-pc">ことを書く</div>
+            <div class="mainvisual__lead">リードリードリード2</div>
+            <div class="mainvisual__button"><a class="button-mainvisual" href="">お問い合わせ</a></div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="mainvisual__content">
+            <div class="mainvisual__title">一番伝えたい<br class="hidden-tab hidden-pc">ことを書く</div>
+            <div class="mainvisual__lead">リードリードリード3</div>
+            <div class="mainvisual__button"><a class="button-mainvisual" href="">お問い合わせ</a></div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="mainvisual__content">
+            <div class="mainvisual__title">一番伝えたい<br class="hidden-tab hidden-pc">ことを書く</div>
+            <div class="mainvisual__lead">リードリードリード4</div>
+            <div class="mainvisual__button"><a class="button-mainvisual" href="">お問い合わせ</a></div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="mainvisual__content">
+            <div class="mainvisual__title">一番伝えたい<br class="hidden-tab hidden-pc">ことを書く</div>
+            <div class="mainvisual__lead">リードリードリード5</div>
+            <div class="mainvisual__button"><a class="button-mainvisual" href="">お問い合わせ</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
     </div>
   </div>
+
+
   <section class="card">
     <div class="card__inner inner">
       <h2 class="section-title">Card</h2>
@@ -326,6 +366,22 @@
   <div class="totop">
     <a href="#"><img src="./img/totop.png" alt="上部へスクロール"></a>
   </div>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    // スライダー
+    var mySwiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      }
+    });
+  </script>
 </body>
 
 </html>
