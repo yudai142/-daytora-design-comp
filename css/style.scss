@@ -302,8 +302,17 @@ img {
 }
 
 .mainvisual {
+  height: 700px;
   width: 100%;
+  position: relative;
+  background: transparent url(../img/mainvisual.png) no-repeat top center/cover;
   overflow: hidden;
+  @include mq('tab') {
+    height: 600px;
+  }
+  @include mq('sp') {
+    height: 500px;
+  }
   &__content {
     position: absolute;
     top: 50%;
@@ -360,7 +369,6 @@ img {
   position: relative;
   height: 700px;
   width: 100%;
-  background: transparent url(../img/mainvisual.png) no-repeat top center / cover;
   @include mq('tab') {
     height: 600px;
   }
@@ -390,7 +398,7 @@ img {
 
 .swiper-button-prev {
   background: transparent url(../img/slide-arrow-left.png) no-repeat center center / contain;
-  left: calc(50% - #{$layout-width-inner / 2}+16px);
+  left: calc(50% - #{$layout-width-inner / 2} + 16px);
   @include mq('tab') {
     left: 24px;
   }
@@ -401,7 +409,7 @@ img {
 
 .swiper-button-next {
   background: transparent url(../img/slide-arrow-right.png) no-repeat center center / contain;
-  right: calc(50% - #{$layout-width-inner / 2}+16px);
+  right: calc(50% - #{$layout-width-inner / 2} + 16px);
   @include mq('tab') {
     right: 24px;
   }

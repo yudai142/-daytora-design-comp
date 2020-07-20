@@ -322,8 +322,23 @@ img {
 }
 
 .mainvisual {
+  height: 700px;
   width: 100%;
+  position: relative;
+  background: transparent url(../img/mainvisual.png) no-repeat top center/cover;
   overflow: hidden;
+}
+
+@media (max-width: 1087px) {
+  .mainvisual {
+    height: 600px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mainvisual {
+    height: 500px;
+  }
 }
 
 .mainvisual__content {
@@ -409,7 +424,6 @@ img {
   position: relative;
   height: 700px;
   width: 100%;
-  background: transparent url(../img/mainvisual.png) no-repeat top center/cover;
 }
 
 @media (max-width: 1087px) {
@@ -454,7 +468,7 @@ img {
 
 .swiper-button-prev {
   background: transparent url(../img/slide-arrow-left.png) no-repeat center center/contain;
-  left: calc(50% - 544px+16px);
+  left: calc(50% - 544px + 16px);
 }
 
 @media (max-width: 1087px) {
@@ -471,7 +485,7 @@ img {
 
 .swiper-button-next {
   background: transparent url(../img/slide-arrow-right.png) no-repeat center center/contain;
-  right: calc(50% - 544px+16px);
+  right: calc(50% - 544px + 16px);
 }
 
 @media (max-width: 1087px) {
