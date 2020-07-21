@@ -12,7 +12,7 @@
 
 <body>
   <header class="header">
-    <div class="header__inner inner">
+    <div class="inner header__inner">
       <h1 class="header__logo">
         <a href=""><img src="./img/logo.png" alt="The Company"></a>
       </h1>
@@ -27,6 +27,25 @@
       </nav>
     </div>
   </header>
+
+	<button class="drawer-icon js-drawer for-drawer" type="button" data-target="for-drawer">
+		<span class="drawer-bars">
+			<span class="drawer-bar"></span>
+			<span class="drawer-bar"></span>
+			<span class="drawer-bar"></span>
+		</span>
+	</button><!-- /drawer-icon -->
+	<div class="drawer-background for-drawer"></div>
+	<div class="drawer-content for-drawer">
+		<ul>
+			<li><a href="">Card</a></li>
+			<li><a href="">News</a></li>
+			<li><a href="">Price</a></li>
+			<li><a href="">Access</a></li>
+			<li><a href="">Contact</a></li>
+		</ul>
+	</div><!-- /drawer-content -->
+
   <div class="mainvisual">
     <div class="swiper-container">
       <div class="swiper-wrapper">
@@ -369,6 +388,7 @@
   </div>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="./js/wow.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>
     // スライダー
     var mySwiper = new Swiper('.swiper-container', {
@@ -387,6 +407,15 @@
   <script>
     new WOW().init();
   </script>
+	<script>
+		// ドロワー
+		jQuery(".js-drawer").on("click", function(e) {
+			e.preventDefault();
+			let targetClass = jQuery(this).attr("data-target");
+			jQuery("." + targetClass).toggleClass("is-checked");
+			return false;
+		});
+	</script>
 </body>
 
 </html>
