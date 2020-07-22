@@ -1359,12 +1359,15 @@ img {
   right: 18px;
   bottom: 8px;
   z-index: 100;
-  visibility: visible;
+  visibility: hidden;
   transition: all 0.3s ease 0s;
   @include mq('sp') {
     right: 10px;
     bottom: 10px;
   }
+	&.is-show {
+		visibility: visible;
+	}
   a {
     text-decoration: none;
     transition: all 0.3s ease 0s;

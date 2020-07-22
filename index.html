@@ -18,11 +18,11 @@
       </h1>
       <nav class="header__nav">
         <ul>
-          <li><a href="" class="is-active">Card</a></li>
-          <li><a href="">News</a></li>
-          <li><a href="">Price</a></li>
-          <li><a href="">Access</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#a-card" class="is-active">Card</a></li>
+					<li><a href="#a-news">News</a></li>
+					<li><a href="#a-price">Price</a></li>
+					<li><a href="#a-access">Access</a></li>
+					<li><a href="#a-contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -38,11 +38,11 @@
 	<div class="drawer-background for-drawer"></div>
 	<div class="drawer-content for-drawer">
 		<ul>
-			<li><a href="">Card</a></li>
-			<li><a href="">News</a></li>
-			<li><a href="">Price</a></li>
-			<li><a href="">Access</a></li>
-			<li><a href="">Contact</a></li>
+      <li><a href="#a-card">Card</a></li>
+      <li><a href="#a-news">News</a></li>
+      <li><a href="#a-price">Price</a></li>
+      <li><a href="#a-access">Access</a></li>
+      <li><a href="#a-contact">Contact</a></li>
 		</ul>
 	</div><!-- /drawer-content -->
 
@@ -91,8 +91,7 @@
     </div>
   </div>
 
-
-  <section class="card">
+  <section id="a-card" class="card">
     <div class="card__inner inner">
       <h2 class="section-title wow fadeInUp">Card</h2>
       <div class="card__items">
@@ -153,7 +152,8 @@
       </div>
     </div>
   </section>
-  <section class="news">
+
+  <section id="a-news" class="news">
     <div class="news__inner inner">
       <h2 class="section-title wow fadeInUp">News</h2>
       <div class="news__items wow fadeInUp">
@@ -226,7 +226,8 @@
       </div>
     </div>
   </section>
-  <section class="table">
+
+  <section id="a-price" class="table">
     <div class="table__inner inner">
       <h2 class="section-title wow fadeInUp">Price</h2>
       <div class="table__content">
@@ -268,7 +269,8 @@
       </div>
     </div>
   </section>
-  <section class="map">
+
+  <section id="a-access" class="map">
     <div class="map__inner inner">
       <h2 class="section-title wow fadeInUp">Access</h2>
       <div class="map__iframe wow fadeInUp">
@@ -288,7 +290,8 @@
       </div>
     </div>
   </section>
-  <section class="contact">
+
+  <section id="a-contact" class="contact">
     <div class="contact__inner inner">
       <h2 class="section-title wow fadeInUp">Contact</h2>
       <div class="contact__item wow fadeInUp">
@@ -414,6 +417,41 @@
 			let targetClass = jQuery(this).attr("data-target");
 			jQuery("." + targetClass).toggleClass("is-checked");
 			return false;
+		});
+  </script>
+	<script>
+		jQuery(function() {
+
+			// スムーススクロール
+			jQuery('a[href^="#"]').click(function() {
+				let header = jQuery(".header").innerHeight();
+				let speed = 300;
+				let id = jQuery(this).attr("href");
+				let target = jQuery("#" == id ? "html" : id);
+				let position = jQuery(target).offset().top - header;
+				if ("fixed" !== jQuery(".header").css("position")) {
+					position = jQuery(target).offset().top;
+				}
+				if (0 > position) {
+					position = 0;
+				}
+				jQuery("html, body").animate({
+						scrollTop: position
+					},
+					speed
+				);
+				return false;
+			});
+
+			// スクロール判定
+			jQuery(window).on("scroll", function() {
+
+				if (100 < jQuery(this).scrollTop()) {
+					jQuery('.totop').addClass('is-show');
+				} else {
+					jQuery('.totop').removeClass('is-show');
+				}
+			});
 		});
 	</script>
 </body>
