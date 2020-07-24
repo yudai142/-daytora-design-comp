@@ -291,6 +291,38 @@
     </div>
   </section>
 
+  <section class="qa">
+    <div class="qa__inner inner">
+      <h2 class="section-title">Q &amp; A</h2>
+      <dl class="qa__items">
+        <div class="qa__item accordion">
+          <dt class="accordion__head">クリックするとどうなりますか？<span class="accordion__icon"></span></dt>
+          <dd class="accordion__body">
+            <div class="accordion__body-in">アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。</div>
+          </dd>
+        </div>
+        <div class="qa__item accordion">
+          <dt class="accordion__head">クリックするとどうなりますか？<span class="accordion__icon"></span></dt>
+          <dd class="accordion__body">
+            <div class="accordion__body-in">アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。</div>
+          </dd>
+        </div>
+        <div class="qa__item accordion">
+          <dt class="accordion__head">クリックするとどうなりますか？<span class="accordion__icon"></span></dt>
+          <dd class="accordion__body">
+            <div class="accordion__body-in">アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。</div>
+          </dd>
+        </div>
+        <div class="qa__item accordion">
+          <dt class="accordion__head">クリックするとどうなりますか？<span class="accordion__icon"></span></dt>
+          <dd class="accordion__body">
+            <div class="accordion__body-in">アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。アコーディオンでここが開きます。</div>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
   <section id="a-contact" class="contact">
     <div class="contact__inner inner">
       <h2 class="section-title wow fadeInUp">Contact</h2>
@@ -459,6 +491,12 @@
 				jQuery('.header__nav ul li a').removeClass('is-active');
 				jQuery(this).addClass('is-active');
 				return false;
+			});
+      
+			// アコーディオン
+			jQuery('.accordion__head').click(function() {
+				jQuery(this).next().slideToggle();
+				jQuery(this).children('.accordion__icon').toggleClass('is-open');
 			});
 	</script>
 </body>

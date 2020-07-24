@@ -923,6 +923,80 @@ img {
   }
 }
 
+.qa {
+  padding: 56px 0 142px;
+  @include mq('sp') {
+    padding: 36px;
+    padding-bottom: 100px;
+  }
+  &__inner {}
+  &__items {
+    margin: 92px auto 0;
+    width: 900px;
+    max-width: 100%;
+  }
+  &__item {
+    margin-bottom: 28px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.accordion {
+  &__head {
+    margin: 0;
+    background: $color-main;
+    color: #fff;
+    padding: 16px 56px;
+    position: relative;
+    cursor: pointer;
+    &::before {
+      content: "Q";
+      position: absolute;
+      font-weight: 700;
+      color: #fff;
+      left: 22px;
+      top: 18px;
+    }
+  }
+  &__body {
+    margin: 0;
+    background: #fff;
+    display: none;
+    border: 1px solid $color-main;
+  }
+  &__body-in {
+    padding: 20px 56px 30px;
+    line-height: (29 / 18);
+    color: $color-main;
+    position: relative;
+    font-size: 18px;
+    @include mq('sp') {
+      padding-right: 22px;
+    }
+    &::before {
+      content: "A";
+      position: absolute;
+      left: 22px;
+      top: 24px;
+      font-weight: bold;
+    }
+  }
+  &__icon {
+    width: 16px;
+    height: 16px;
+    background: transparent url(../img/icon-plus.png) no-repeat center center / contain;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    &.is-open {
+      background-image: url(../img/icon-minus.png);
+    }
+  }
+}
+
 .contact {
   padding: 56px 0 124px;
   background: #efefef;
