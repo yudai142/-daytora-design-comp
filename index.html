@@ -91,6 +91,66 @@
     </div>
   </div>
 
+  <section class="tab">
+    <div class="tab__inner inner">
+      <h2 class="section-title">Tab</h2>
+      <div class="tab__nav">
+        <ul>
+          <li><span class="is-active" data-target="#tab-item01">タブ1</span></li>
+          <li><span data-target="#tab-item02">タブ2</span></li>
+          <li><span data-target="#tab-item03">タブ3</span></li>
+          <li><span data-target="#tab-item04">タブ4</span></li>
+        </ul>
+      </div>
+      <div class="tab__content">
+        <div id="tab-item01" class="tab-item is-active">
+          <div class="tab-item__lead"><span>タブ１のキャッチ的なテキスト</span></div>
+          <div class="tab-item__body">
+            <div class="tab-item__img"><img src="./img/tab01.png" alt=""></div>
+            <div class="tab-item__content">
+              <div class="tab-item__title">タブ１の見出し</div>
+              <div class="tab-item__info">タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。</div>
+              <div class="tab-item__link"><a href="" class="button-arrow-right">詳しく見る</a></div>
+            </div>
+          </div>
+        </div>
+        <div id="tab-item02" class="tab-item">
+          <div class="tab-item__lead"><span>タブ２のキャッチ的なテキスト</span></div>
+          <div class="tab-item__body">
+            <div class="tab-item__img"><img src="./img/tab02.png" alt=""></div>
+            <div class="tab-item__content">
+              <div class="tab-item__title">タブ２の見出し</div>
+              <div class="tab-item__info">タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。</div>
+              <div class="tab-item__link"><a href="" class="button-arrow-right">詳しく見る</a></div>
+            </div>
+          </div>
+        </div>
+        <div id="tab-item03" class="tab-item">
+          <div class="tab-item__lead"><span>タブ３のキャッチ的なテキスト</span></div>
+          <div class="tab-item__body">
+            <div class="tab-item__img"><img src="./img/tab03.png" alt=""></div>
+            <div class="tab-item__content">
+              <div class="tab-item__title">タブ３の見出し</div>
+              <div class="tab-item__info">タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。</div>
+              <div class="tab-item__link"><a href="" class="button-arrow-right">詳しく見る</a></div>
+            </div>
+          </div>
+        </div>
+        <div id="tab-item04" class="tab-item">
+          <div class="tab-item__lead"><span>タブ４のキャッチ的なテキスト</span></div>
+          <div class="tab-item__body">
+            <div class="tab-item__img"><img src="./img/tab04.png" alt=""></div>
+            <div class="tab-item__content">
+              <div class="tab-item__title">タブ４の見出し</div>
+              <div class="tab-item__info">タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。タブ１のコンテンツ。</div>
+              <div class="tab-item__link"><a href="" class="button-arrow-right">詳しく見る</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="a-card" class="card">
     <div class="card__inner inner">
       <h2 class="section-title wow fadeInUp">Card</h2>
@@ -512,6 +572,20 @@
 				jQuery(this).addClass('is-active');
 				return false;
 			});
+
+      // クリック（タブ）
+      jQuery('.tab__nav ul li span').click(function(e) {
+        e.preventDefault();
+        let target = jQuery(this).data("target");
+
+        jQuery('.tab__nav ul li span').removeClass('is-active');
+        jQuery(this).addClass('is-active');
+
+        jQuery('.tab-item').removeClass('is-active');
+        jQuery(target).addClass('is-active');
+
+        return false
+      });
       
 			// アコーディオン
 			jQuery('.accordion__head').click(function() {
