@@ -359,13 +359,33 @@
             <label for="" class="contact__radio-item"><input type="radio" class="form-radio"><span>ラジオ３</span></label>
           </div>
           <div class="contact__check">
-            <label for=""><input class="form-checkbox" type="checkbox" name="your-checkbox" required><span><a href="">プライバシーポリシー</a>に合意する</span></label>
+            <label for=""><input class="form-checkbox" type="checkbox" name="your-checkbox" required><span><a class="js-modal-open" href="" data-target="for-modal">プライバシーポリシー</a>に合意する</span></label>
           </div>
           <div class="contact__submit"><input type="text" class="form-button" value="送信する"></div>
         </form>
+
+        <!-- モーダル -->
+        <div class="contact__modal-background for-modal"></div>
+        <div class="contact__modal for-modal">
+          <div class="contact__modal-close-icon js-modal-close" data-target="for-modal"><img src="./img/icon-modal-close.png" alt=""></div>
+          <div class="contact__modal-title">プライバシーポリシー</div>
+          <div class="contact__modal-content">
+            <div class="contact__modal-head">ほにゃらら</div>
+            <div class="contact__modal-text">ほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃらら。</div>
+            <div class="contact__modal-head">ほにゃらら</div>
+            <div class="contact__modal-text">ほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃらら。</div>
+            <div class="contact__modal-head">ほにゃらら</div>
+            <div class="contact__modal-text">ほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃらら。</div>
+            <div class="contact__modal-head">ほにゃらら</div>
+            <div class="contact__modal-text">ほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃらら。</div>
+          </div>
+          <div class="contact__modal-close-button"><button class="button-modal js-modal-close" type="button" data-target="for-modal">閉じる</button></div>
+        </div>
+
       </div>
     </div>
   </section>
+
   <footer class="footer">
     <div class="footer__inner inner">
       <div class="footer__contents">
@@ -497,6 +517,24 @@
 			jQuery('.accordion__head').click(function() {
 				jQuery(this).next().slideToggle();
 				jQuery(this).children('.accordion__icon').toggleClass('is-open');
+			});
+
+			// モダール（開く）
+			jQuery('.js-modal-open').click(function(e) {
+				e.preventDefault();
+				let target = jQuery(this).data("target");
+				jQuery('.' + target).addClass('is-show');
+
+				return false;
+			});
+
+			// モダール（閉じる）
+			jQuery('.js-modal-close').click(function(e) {
+				e.preventDefault();
+				let target = jQuery(this).data("target");
+				jQuery('.' + target).removeClass('is-show');
+
+				return false;
 			});
 	</script>
 </body>
