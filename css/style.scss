@@ -200,6 +200,20 @@ img {
       opacity: $hover-opacity;
     }
   }
+  &-tel {
+    @extend .button;
+    padding: 10px 26px;
+    font-size: 18px;
+    border-radius: 8px;
+    background: $color-active;
+    @include mq('tab') {
+      font-size: 16px;
+    }
+    @include mq('sp') {
+      padding: 4px 18px;
+      border-radius: 6px;
+    }
+  }
 }
 
 .section-title {
@@ -312,6 +326,21 @@ img {
             }
           }
         }
+      }
+    }
+  }
+  &__contact {
+    margin-left: auto;
+    @include mq('sp') {
+      display: none;
+    }
+    &-button {}
+    &-time {
+      margin-top: 3px;
+      font-size: 14px;
+      color: $color-background-base;
+      @include mq('tab') {
+        font-size: 12px;
       }
     }
   }

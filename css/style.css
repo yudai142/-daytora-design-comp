@@ -72,7 +72,7 @@ img {
   }
 }
 
-.button, .button-mainvisual, .button-arrow-right, .button-modal {
+.button, .button-mainvisual, .button-arrow-right, .button-modal, .button-tel {
   display: inline-block;
   background: #3f51b5;
   color: #fff;
@@ -172,6 +172,26 @@ img {
 
 .button-modal:hover {
   opacity: 0.6;
+}
+
+.button-tel {
+  padding: 10px 26px;
+  font-size: 18px;
+  border-radius: 8px;
+  background: #e81919;
+}
+
+@media (max-width: 1087px) {
+  .button-tel {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .button-tel {
+    padding: 4px 18px;
+    border-radius: 6px;
+  }
 }
 
 .section-title {
@@ -330,6 +350,28 @@ img {
 
 .header__nav ul li a:hover::after, .header__nav ul li a.is-active::after {
   opacity: 1;
+}
+
+.header__contact {
+  margin-left: auto;
+}
+
+@media (max-width: 767px) {
+  .header__contact {
+    display: none;
+  }
+}
+
+.header__contact-time {
+  margin-top: 3px;
+  font-size: 14px;
+  color: #fff;
+}
+
+@media (max-width: 1087px) {
+  .header__contact-time {
+    font-size: 12px;
+  }
 }
 
 .tab {
