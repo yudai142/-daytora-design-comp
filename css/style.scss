@@ -687,6 +687,106 @@ img {
   }
 }
 
+.blog {
+  background: #efefef;
+  padding: 56px 0 142px;
+  @include mq('sp') {
+    padding-top: 36px;
+    padding-bottom: 100px;
+  }
+  &__inner {}
+  &__items {
+    margin-top: 94px;
+  }
+  &__item {
+    margin-top: 20px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  &-card {
+    border: 1px solid #707070;
+    border-radius: 6px;
+    background: #fff;
+    display: flex;
+    padding: 22px 22px 24px;
+    @include mq('sp') {
+      display: block;
+    }
+    &__img {
+      width: 372 / 1088 * 100%;
+      @include mq('sp') {
+        width: 100%;
+      }
+    }
+    &__body {
+      width: (1088 - 372) / 1088 * 100%;
+      position: relative;
+      padding: 4px 0 38px 58px;
+      @include mq('tab') {
+        padding-left: 30px;
+      }
+      @include mq('sp') {
+        padding-left: 0;
+        padding-top: 24px;
+        width: 100%;
+      }
+    }
+    &__meta {
+      display: flex;
+      align-items: center;
+    }
+    &__label {
+      span, a {
+        display: inline-block;
+        background: $color-main;
+        color: $color-background-base;
+        font-weight: bold;
+        border-radius: 2px;
+        padding: 4px 10px;
+        box-shadow: 0 3px 6px rgba(#000, 0.16);
+        font-size: 12px;
+        text-decoration: none;
+        text-align: center;
+        min-width: 92px;
+      }
+      a {
+        transition: all 0.3s ease 0s;
+      }
+    }
+    &__title {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    &__content {
+      margin-top: 14px;
+      color: #999;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: (22 / 14);
+    }
+    &__link {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      a {
+        font-weight: bold;
+        font-size: 14px;
+        color: #999;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          opacity: $hover-opacity;
+        }
+      }
+    }
+  }
+  &-published {
+    margin-left: auto;
+    line-height: 1;
+  }
+}
+
 .swiper-slide {
   position: relative;
   height: 700px;
@@ -820,8 +920,30 @@ img {
   }
   &__img {
     text-align: center;
+    position: relative;
     img {
       vertical-align: bottom;
+    }
+  }
+  &__label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    span, a {
+      display: inline-block;
+      background: $color-main;
+      color: #fff;
+      font-weight: bold;
+      padding: 4px 10px;
+      font-size: 12px;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: none;
+      border-radius: 0;
+      min-width: 96px;
+    }
+    a {
+      transition: all 0.3s ease 0s;
     }
   }
   &__body {
