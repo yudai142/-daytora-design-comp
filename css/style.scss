@@ -962,6 +962,79 @@ img {
   }
 }
 
+.voice {
+  background: #efefef;
+  padding: 56px 0 142px;
+  @include mq('sp') {
+    padding-top: 36px;
+    padding-bottom: 100px;
+  }
+  &__inner {}
+  &__items {
+    margin-top: 82px;
+    @include mq('sp') {
+      margin-top: 52px;
+    }
+  }
+  &__item {
+    margin-top: 40px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  &-card {
+    display: flex;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(#000, 0.16);
+    @include mq('sp') {
+      display: block;
+    }
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+    &__img {
+      width: 50%;
+      @include mq('sp') {
+        width: 100%;
+      }
+      img {
+        vertical-align: top;
+      }
+    }
+    &__body {
+      width: 50%;
+      padding: 18px 34px 58px;
+      color: #6f7579;
+      position: relative;
+      @include mq('sp') {
+        width: 100%;
+        padding: 22px 16px;
+      }
+    }
+    &__lead {
+      font-weight: bold;
+      font-size: 22px;
+    }
+    &__content {
+      margin-top: 8px;
+      line-height: (24 / 16);
+    }
+    &__auther {
+      position: absolute;
+      right: 24px;
+      bottom: 28px;
+      @include mq('tab') {
+        bottom: 20px;
+      }
+      @include mq('sp') {
+        position: static;
+        margin-top: 16px;
+        text-align: right;
+      }
+    }
+  }
+}
+
 .news {
   padding: 56px 0 32px;
   &__inner {}
